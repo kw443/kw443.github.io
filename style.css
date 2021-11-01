@@ -1,0 +1,329 @@
+@font-face {
+    font-family: "IBM Plex Serif";
+    src: url("fonts/IBM_Plex_Serif/IBMPlexSerif-Regular.ttf");
+}
+
+@font-face {
+    font-family: "IBM Plex Serif Bold";
+    src: url("fonts/IBM_Plex_Serif/IBMPlexSerif-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "EB Garamond";
+    src: url("fonts/EB_Garamond/static/EBGaramond-Regular.ttf");
+}
+
+body {
+    margin: 0;
+    font-family: "IBM Plex Serif";
+    color: #444;
+    background-color: #fffffd;
+}
+
+section {
+    display: flex;
+    flex-flow: column;
+}
+
+h1 {
+    font-family: "IBM Plex Serif Bold";
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.header {
+    display: flex;
+    flex: 0 1 auto;
+    padding: 2vw 4vw;
+}
+
+.header-logo img {
+    max-height: 60px;
+    max-width: 100%;
+    width: auto;
+}
+
+.header-nav-list {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.header-nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav-item:not(:first-child) {
+    margin-left: 2vw;
+}
+
+.header-nav-item > a {
+    color: #444444;
+    font-family: "EB Garamond";
+    font-size: 1.75em;
+    position: relative;
+    text-decoration: none;
+}
+
+.header-nav-item > a.active {
+    border-bottom: 2px #bba0c3 solid;
+    color: #bba0c3;
+}
+
+.header-nav-item > a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #bba0c3;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+.header-nav-item > a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+.header-nav-item > a:hover {
+    color: #bba0c3;
+    transform: scale(1);
+}
+
+.intro-content {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 0 6.6vw 4vw 6.6vw;
+}
+
+.intro-content p {
+    font-size: 1.75em;
+}
+
+.intro-content button {
+    background-color: #bba0c3;
+    border: none;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1.25em;
+    padding: 1em 0;
+    width: 50%;
+}
+
+.intro-content button:hover {
+    background-color: #a18aa8;
+    cursor: pointer;
+}
+
+.intro-content > .row {
+    display: flex;
+    flex-direction: row;
+    max-width: 75%;
+}
+
+.intro-content > .row > .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.intro-content > .row > .col:not(:first-child) {
+    align-items: flex-end;
+}
+
+.work-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 4vw 6.6vw;
+    width: -webkit-fill-available;
+}
+
+.work-content > .card {
+    background-color: #bba0c3;
+    opacity: 0.75;
+    width: 75%;
+    height: 100px;
+}
+
+.about-content {
+    display: flex;
+}
+
+.about-content > .left-col {
+    flex-grow: 3;
+}
+
+/* Timeline CSS */
+ul.timeline {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+    width: 75%;
+}
+
+ul.timeline:before {
+    background: #d4d9df;
+    content: " ";
+    display: inline-block;
+    height: 100%;
+    /* left: 32px; */
+    position: absolute;
+    width: 2px;
+    z-index: 400;
+}
+
+ul.timeline > li {
+    margin: 40px 0;
+    padding-left: 40px;
+}
+
+ul.timeline > li:before {
+    background-color: #fffffd;
+    border: 4px solid #bba0c3;
+    border-radius: 50%;
+    content: " ";
+    display: inline-block;
+    height: 25px;
+    left: -15px;
+    margin-top: 55px;
+    position: absolute;
+    width: 25px;
+    z-index: 400;
+}
+
+ul.timeline .timeline-entry {
+    display: flex;
+    padding: 30px;
+    position: relative;
+}
+
+.timeline-entry-background {
+    /* background-color: #bba0c3; */
+    border: 1px solid #d4d9df;
+    box-shadow: 0 8px 16px 0 rgb(187 160 195 / 60%);
+    box-sizing: border-box;
+    height: 100%;
+    left: 0;
+    opacity: 0.65;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.timeline-entry img {
+    width: 75px;
+    height: 75px;
+}
+
+.timeline-entry-content {
+    padding: 0 20px;
+}
+
+.timeline-entry-header > p {
+    margin: 0;
+}
+
+.timeline-entry-header > p:first-child {
+    font-family: "IBM Plex Serif Bold";
+    font-size: large;
+    margin: 5px 0;
+}
+
+.footer {
+    align-items: center;
+    background-color: rgb(187, 160, 195, 0.5);
+    display: flex;
+    justify-content: center;
+    padding: 2vh 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #444;
+    font-size: 2em;
+    padding: 0 2vw;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+/** Phone screen */
+@media screen and (max-width: 1000px) {
+    .intro-content > .row {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .intro-content > .row > .col {
+        align-items: center;
+        width: 100%;
+    }
+
+    .intro-content > .row > .col:not(:first-child) {
+        align-items: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    h1 {
+        font-size: 4.5em;
+    }
+
+    .intro-content p {
+        font-size: 2.5em;
+    }
+
+    .intro-content button {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-height: 850px) {
+    section.about-intro {
+        min-height: 100%;
+    }
+}
+
+/* ABOUT PAGE */
+section.bookshelf, section.about {
+    align-items: center;
+}
+
+.bookshelf-content, .about-content {
+    width: 75%;
+}
+
+.bookshelf-content > h2 {
+    font-family: "EB Garamond";
+    font-size: 2em;
+}
+
+.bookshelf-content > .books {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bookshelf-content > .books > img {
+    height: 30vh;
+    width: auto;
+}
+
+.about-content > h2 {
+    font-family: "EB Garamond";
+    font-size: 2.25em;
+}
