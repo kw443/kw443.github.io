@@ -13,6 +13,11 @@
     src: url("fonts/EB_Garamond/static/EBGaramond-Regular.ttf");
 }
 
+@font-face {
+    font-family: "EB Garamond Bold";
+    src: url("fonts/EB_Garamond/static/EBGaramond-Bold.ttf")
+}
+
 body {
     margin: 0;
     font-family: "IBM Plex Serif";
@@ -158,8 +163,81 @@ h1 {
     display: flex;
 }
 
+/* ABOUT PAGE */
+section.bookshelf, section.about {
+    align-items: center;
+}
+
+.bookshelf-content, .about-content {
+    padding-bottom: 10vh;
+    width: 75%;
+}
+
+.about-content h1 {
+    font-family: 'EB Garamond Bold';
+}
+
+.about-content p {
+    font-size: 1.25em;
+}
+
+.about-content ul {
+    font-size: 1.25em;
+    list-style-type: none;
+}
+
 .about-content > .left-col {
-    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+
+.about-content > .left-col > p {
+    margin-bottom: 0;
+}
+
+.about-content > .right-col {
+    width: 40%;
+}
+
+.right-col #profile-pic {
+    float: right;
+    position: relative;
+    top: 3vh;
+}
+
+.right-col #dog-pic {
+    position: relative;
+    top: -3vh;
+}
+
+.bookshelf-content > h2 {
+    font-family: "EB Garamond Bold";
+    font-size: 2em;
+}
+
+.bookshelf-content > .books {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bookshelf-content > .books > .book {
+    padding: 5px;
+}
+
+.bookshelf-content > .books img {
+    height: 30vh;
+    width: auto;
+}
+
+.book-description > .book-title {
+    font-family: "IBM Plex Serif Bold";
+    margin-bottom: 0;
+}
+
+.book-description > .book-author {
+    margin-top: 0;
 }
 
 /* Timeline CSS */
@@ -244,7 +322,7 @@ ul.timeline .timeline-entry {
     background-color: rgb(187, 160, 195, 0.5);
     display: flex;
     justify-content: center;
-    padding: 2vh 0;
+    padding: 10vh 0;
     width: 100%;
 }
 
@@ -277,6 +355,37 @@ ul.timeline .timeline-entry {
     h1 {
         text-align: center;
     }
+
+    .about-content {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about-content > .left-col {
+        width: 100%;
+    }
+
+    .about-content > .right-col {
+        width: 100%;
+    }
+
+    .bookshelf-content > h2 {
+        text-align: center;
+    }
+
+    .bookshelf-content > .books {
+        flex-direction: column;
+    }
+
+    .bookshelf-content > .books > .book {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .book > .book-description {
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 2000px) {
@@ -291,39 +400,18 @@ ul.timeline .timeline-entry {
     .intro-content button {
         font-size: 1.5em;
     }
+
+    .about-content p {
+        font-size: 1.75em;
+    }
+
+    .about-content ul {
+        font-size: 1.75em;
+    }
 }
 
 @media screen and (max-height: 850px) {
     section.about-intro {
         min-height: 100%;
     }
-}
-
-/* ABOUT PAGE */
-section.bookshelf, section.about {
-    align-items: center;
-}
-
-.bookshelf-content, .about-content {
-    width: 75%;
-}
-
-.bookshelf-content > h2 {
-    font-family: "EB Garamond";
-    font-size: 2em;
-}
-
-.bookshelf-content > .books {
-    display: flex;
-    justify-content: space-between;
-}
-
-.bookshelf-content > .books > img {
-    height: 30vh;
-    width: auto;
-}
-
-.about-content > h2 {
-    font-family: "EB Garamond";
-    font-size: 2.25em;
 }
