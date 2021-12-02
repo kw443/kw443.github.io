@@ -9,6 +9,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/906fde76e4.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
@@ -17,6 +18,20 @@
         function scrollToBottom() {
             console.log("scrolling");
             $('html,body').animate({ scrollTop: document.body.scrollHeight }, "medium");
+        }
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "sarahmarywilliams00@gmail.com",
+                Password: "simp1234!",
+                To: 'kw443@cornell.edu',
+                From: "sarahmarywilliams00@gmail.com",
+                Subject: "Sending Email using javascript",
+                Body: "Well that was easy!!",
+            })
+                .then(function (message) {
+                    alert("mail sent successfully")
+                });
         }
         $(document).ready(function () {
             $('.arrow').click(function () {
@@ -65,6 +80,7 @@
                     <h1>Hi, I'm Keely! I'm a <br><span id="desc">software engineer</span></h1>
                     <p>currently developing at Cornell University.</p>
                     <a href="mailto:kw443@cornell.edu"><button>Contact Me!</button></a>
+                    <button onclick="sendEmail()">Send Email</button>
                 </div>
                 <div class="col">
                     <img src="img/profile.png"
