@@ -9,6 +9,16 @@
 </head>
 
 <body>
+    <script>
+        $(document).ready(function () {
+            $('.scroll-down').click(function () {
+                console.log("clicked");
+                var ele = $("#bookshelf");
+                var posi = ($(ele).offset() || 0).top;
+                $('html, body').animate({ scrollTop: posi }, 'slow');
+            })
+        });
+    </script>
     <section class="intro">
         <div class="header">
             <div class="header-logo">
@@ -38,7 +48,7 @@
                 <p>In my free time, I like to:</p>
                 <ul>
                     <li>&#129406; go on occasional hikes (Ithaca is gorges!)</li>
-                    <li>&#128218; curl up in bed and read</li>
+                    <li>&#128218; curl up in bed and <a class="scroll-down">read</a></li>
                     <li>&#128250; binge cdramas</li>
                     <li>&#127911; listen to true crime podcasts</li>
                     <li>&#128062; bribe my dog into going on walks</li>
@@ -50,7 +60,7 @@
             </div>
         </div>
     </section>
-    <section class="bookshelf">
+    <section id="bookshelf" class="bookshelf">
         <div class="bookshelf-content">
             <h2>my bookshelf</h2>
             <div class="books">
@@ -76,8 +86,8 @@
                     </div>
                 </div>
             </div>
+            <a href="mailto:kw443@cornell.edu?subject=Book Rec"><button>Drop a book rec!</button></a>
         </div>
-
         </div>
     </section>
     <div class="footer">

@@ -104,6 +104,7 @@ h1 {
     align-items: center;
     display: flex;
     flex: 1 1 auto;
+    flex-direction: column;
     justify-content: center;
     padding: 0 6.6vw 4vw 6.6vw;
 }
@@ -112,17 +113,16 @@ h1 {
     font-size: 1.75em;
 }
 
-.intro-content button {
+button {
     background-color: #bba0c3;
     border: none;
     color: #fff;
     font-family: inherit;
     font-size: 1.25em;
-    padding: 1em 0;
-    width: 50%;
+    padding: 1em 2em;
 }
 
-.intro-content button:hover {
+button:hover {
     background-color: #a18aa8;
     cursor: pointer;
 }
@@ -414,4 +414,36 @@ ul.timeline .timeline-entry {
     section.about-intro {
         min-height: 100%;
     }
+}
+
+.arrow {
+    bottom: 5vh;
+    color: #bba0c3;
+    position: absolute;
+    font-size: 5em;
+    text-decoration: none;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transition: all .2s ease-in-out;
+}
+
+.arrow:hover {
+    color: #bba0c3;
+    cursor: pointer;
+    text-decoration: none;
+    transform: rotate(90deg) scale(1.2);
+}
+
+#desc {
+    color: #bba0c3;
+}
+
+a {
+    color: #bba0c3;
+    text-decoration: underline;
+}
+
+a:hover {
+    cursor: pointer;
 }

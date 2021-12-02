@@ -5,16 +5,40 @@
     <link rel="stylesheet" href="https://use.typekit.net/quu3zlk.css">
     <title>Keely Wan</title>
     <link rel="icon" href="img/icon.png" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/906fde76e4.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <script>
+        AOS.init();
         function scrollToBottom() {
             console.log("scrolling");
             $('html,body').animate({ scrollTop: document.body.scrollHeight }, "medium");
         }
+        $(document).ready(function () {
+            $('.arrow').click(function () {
+                console.log("clicked");
+                var ele = $("#work");
+                var posi = ($(ele).offset() || 0).top;
+                $('html, body').animate({ scrollTop: posi }, 'slow');
+            })
+            var text = ["software engineer", "student", "CS major"];
+            var counter = 0;
+            var elem = document.getElementById("desc");
+            var inst = setInterval(change, 3000);
+
+            function change() {
+                elem.innerHTML = text[counter];
+                counter++;
+                if (counter >= text.length) {
+                    counter = 0;
+                    // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+                }
+            }
+        });
     </script>
     <section class="about-intro">
         <div class="header">
@@ -38,21 +62,23 @@
         <div class="intro-content">
             <div class="row">
                 <div class="col">
-                    <h1>Hi, I'm Keely! I'm a software engineer</h1>
+                    <h1>Hi, I'm Keely! I'm a <br><span id="desc">software engineer</span></h1>
                     <p>currently developing at Cornell University.</p>
-                    <!-- <button onclick="scrollToBottom()">Contact Me!</button> -->
+                    <a href="mailto:kw443@cornell.edu"><button>Contact Me!</button></a>
                 </div>
                 <div class="col">
-                    <img src="img/profile.png" style="max-width:65%; min-width: 100px; height:auto">
+                    <img src="img/profile.png"
+                        style="max-width:65%; min-width: 100px; height:auto; box-shadow: 0 8px 16px 0 #888888;">
                 </div>
             </div>
+            <a class="arrow">&rang;</a>
         </div>
     </section>
-    <section class="work">
+    <section id="work" class="work">
         <div class="work-content">
             <ul class="timeline">
                 <li>
-                    <div class="timeline-entry">
+                    <div data-aos="zoom-in" data-aos-anchor-placement="top-bottom" class="timeline-entry">
                         <img src="img/google-logo.jpeg" alt="Google, Inc.">
                         <div class="timeline-entry-content">
                             <div class="timeline-entry-header">
@@ -73,7 +99,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="timeline-entry">
+                    <div data-aos="zoom-in" data-aos-anchor-placement="top-bottom" class="timeline-entry">
                         <img src="img/tesla-logo.jpeg" alt="Tesla, Inc.">
                         <div class="timeline-entry-content">
                             <div class="timeline-entry-header">
@@ -94,7 +120,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="timeline-entry">
+                    <div data-aos="zoom-in" data-aos-anchor-placement="top-bottom" class="timeline-entry">
                         <img src="img/google-logo.jpeg" alt="Google, Inc.">
                         <div class="timeline-entry-content">
                             <div class="timeline-entry-header">
@@ -115,7 +141,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="timeline-entry">
+                    <div data-aos="zoom-in" data-aos-anchor-placement="top-bottom" class="timeline-entry">
                         <img src="img/mitre-logo.jpeg" alt="MITRE Corporation">
                         <div class="timeline-entry-content">
                             <div class="timeline-entry-header">
@@ -136,7 +162,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="timeline-entry">
+                    <div data-aos="zoom-in" data-aos-anchor-placement="top-bottom" class="timeline-entry">
                         <img src="img/cornell-logo.jpeg" alt="Cornell University">
                         <div class="timeline-entry-content">
                             <div class="timeline-entry-header">
