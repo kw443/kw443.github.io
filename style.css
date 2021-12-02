@@ -31,7 +31,7 @@ section {
 }
 
 h1 {
-    font-family: "IBM Plex Serif Bold";
+    font-family: "EB Garamond Bold";
     font-size: 3em;
     font-weight: bold;
     margin-bottom: 0;
@@ -113,7 +113,7 @@ h1 {
     font-size: 1.75em;
 }
 
-button {
+button, input[type=submit] {
     background-color: #bba0c3;
     border: none;
     color: #fff;
@@ -122,9 +122,13 @@ button {
     padding: 1em 2em;
 }
 
-button:hover {
-    background-color: #a18aa8;
+button:hover, input[type=submit]:hover {
+    background-color: rgb(187, 160, 195, 0.8);
     cursor: pointer;
+}
+
+.intro-content h1 {
+    font-family: 'IBM Plex Serif Bold';
 }
 
 .intro-content > .row {
@@ -171,10 +175,6 @@ section.bookshelf, section.about {
 .bookshelf-content, .about-content {
     padding-bottom: 10vh;
     width: 75%;
-}
-
-.about-content h1 {
-    font-family: 'EB Garamond Bold';
 }
 
 .about-content p {
@@ -369,7 +369,7 @@ ul.timeline .timeline-entry {
         width: 100%;
     }
 
-    .bookshelf-content > h2 {
+    .bookshelf-content {
         text-align: center;
     }
 
@@ -385,6 +385,10 @@ ul.timeline .timeline-entry {
 
     .book > .book-description {
         text-align: center;
+    }
+
+    .arrow {
+        display: none;
     }
 }
 
@@ -446,4 +450,33 @@ a {
 
 a:hover {
     cursor: pointer;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#contact-form label {
+    color: #444;
+    font-size: 1.25em;
+    padding: 0.5em 0;
+}
+
+#contact-form input[type=text], #contact-form input[type=email], #contact-form textarea {
+    /* background-color: #dedede; */
+    color: #444;
+    font-family: 'IBM PlexSerif';
+    font-size: 1.25em;
+    padding: 1rem; 
+}
+
+.required:after {
+    content:" *";
+    color: #bba0c3;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    outline-color: #bba0c3;
 }
