@@ -21,23 +21,22 @@
                     if (this.user_email.value.match(
                         /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                     )) {
-                        console.log("email valid");
                         // // generate a five digit number for the contact_number variable
-                        // this.contact_number.value = Math.random() * 100000 | 0;
-                        // // these IDs from the previous steps
-                        // emailjs.sendForm('contact_service', 'contact_form', this)
-                        //     .then(function () {
-                        //         console.log('SUCCESS!');
-                        // this.user_name.value = '';
-                        // this.user_email.value = '';
-                        // this.message.value = '';
-                        //     }, function (error) {
-                        //         console.log('FAILED...', error);
-                        //     });
+                        this.contact_number.value = Math.random() * 100000 | 0;
+                        emailjs.sendForm('contact_service', 'contact_form', this)
+                            .then(function () {
+                                console.log('SUCCESS!');
+                                clearFormInputs();
+                            }, function (error) {
+                                console.log('FAILED...', error);
+                            });
                     }
                 }
 
             });
+        }
+        function clearFormInputs() {
+            $("#contact-form").trigger('reset');
         }
     </script>
 </head>
