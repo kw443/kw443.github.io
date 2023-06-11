@@ -25,6 +25,10 @@ body {
     background-color: #fffffd;
 }
 
+span.emphasized {
+    font-family: "IBM Plex Serif Bold";
+}
+
 section {
     display: flex;
     flex-flow: column;

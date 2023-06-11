@@ -25,7 +25,7 @@
                 var posi = ($(ele).offset() || 0).top;
                 $('html, body').animate({ scrollTop: posi }, 'slow');
             })
-            var text = ["student", "CS major", "software engineer"];
+            var text = ["bookworm", "runner", "ISTJ", "software engineer"];
             var counter = 0;
             var elem = document.getElementById("desc");
             var inst = setInterval(change, 4000);
@@ -70,7 +70,7 @@
             <div class="row">
                 <div class="col">
                     <h1>Hi, I'm Keely! I'm a <br><span id="desc">software engineer</span></h1>
-                    <p>currently developing at Cornell University.</p>
+                    <p>currently developing under the Commerce Pillar at Meta.</p>
                     <a href="contact.html"><button>Contact Me!</button></a>
                 </div>
                 <div class="col">
@@ -85,6 +85,71 @@
         <div class="work-content">
             <h1>my work</h1>
             <ul class="timeline">
+                <li>
+                    <div data-aos="zoom-in" data-aos-anchor-placement="top-bottom" class="timeline-entry">
+                        <a href="https://about.meta.com/" target="_blank"><img src="img/meta-logo.png"
+                                alt="Meta, Inc."></a>
+                        <div class="timeline-entry-content">
+                            <div class="timeline-entry-header">
+                                <p>Software Engineer</p>
+                                <p><a href="https://about.meta.com/" target="_blank">Meta, Inc.</a></p>
+                                <p><small class="text-muted">August 2022 - Present</small></p>
+                            </div>
+                            <div>
+                                <p>I'm working on the Purchase: Checkout Product team under the Monetization org where I
+                                    collaborate with designers, product managers, and other engineers to plan,
+                                    implement, and evaluate features to optimize the checkout experience for buyers
+                                    across Instagram (IG) and Facebook (FB) shops. Last half, I drove our team's growth
+                                    work with one other engineer and shipped several experiments which increased the
+                                    checkout conversion rate by 2.16% on FB and 0.79% on IG, resulting in a 0.84% lift
+                                    in ads return, which <span class="emphasized">attributed to one-third of our team's
+                                        metric goal</span>. I also wrote end-to-end tests to help our team reach 100%
+                                    key flow coverage, thereby creating a more reliable checkout experience for buyers.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-entry-background"></div>
+                    </div>
+                </li>
+                <li>
+                    <div data-aos="zoom-in" data-aos-anchor-placement="top-bottom" class="timeline-entry">
+                        <a href="https://www.spotify.com/us/" target="_blank"><img src="img/spotify.png"
+                                alt="Spotify"></a>
+                        <div class="timeline-entry-content">
+                            <div class="timeline-entry-header">
+                                <p>Sound and Mood</p>
+                                <p><a href="https://classes.cornell.edu/browse/roster/FA21/class/CS/4701"
+                                        target="_blank">CS 4701:
+                                        Practicum in Artificial Intelligence</a>
+                                </p>
+                                <p><small class="text-muted">August - December 2021</small></p>
+                            </div>
+                            <div>
+                                <p>How do audio features affect the mood of a song? For this project, we wanted to test
+                                    our hypothesis that songs possessing similar attributes and aesthetics in terms of
+                                    audio metrics will likely hold a similar emotional response. To do this, we trained
+                                    a few machine learning models (K-Nearest Neighbors, Support Vector Machines, and
+                                    Random Forest Classifiers) using the <a
+                                        href="https://scikit-learn.org/stable/">scikit-learn library</a> on data
+                                    scraped from Spotify's mood playlists. We evaluated the models using the remaining
+                                    songs outside of our training and test data from each playlist, tweaking different
+                                    variables of the algorithms, and persisted the classifier with the best accuracy.
+                                </p>
+                                <p>
+                                    We used our persisted model in our web interface which allowed users to search for
+                                    songs and see the mood classification, and how its audio features compare to the
+                                    audio features of the songs in our training and test data. We used <a
+                                        href="https://d3js.org/">D3.js library</a> for visualizing the data.
+                                </p>
+                                <p>
+                                    Check out our <a href="https://github.com/keelywan/ai-prac">repo</a> for more
+                                    details!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-entry-background"></div>
+                    </div>
+                </li>
                 <li>
                     <div data-aos="zoom-in" data-aos-anchor-placement="top-bottom" class="timeline-entry">
                         <a href="https://about.google/" target="_blank"><img src="img/google-logo.jpeg"
